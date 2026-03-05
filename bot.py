@@ -7,6 +7,16 @@ load_dotenv()  # Load environment variables from .env file
 USERNAME = os.getenv("BOT_USERNAME")
 PASSWORD = os.getenv("BOT_PASSWORD")
 
+if USERNAME is None or PASSWORD is None:
+    missing = []
+    if USERNAME is None:
+        missing.append("BOT_USERNAME")
+    if PASSWORD is None:
+        missing.append("BOT_PASSWORD")
+    raise RuntimeError(
+        f"Required environment variable(s) {', '.join(missing)} are not set. "
+        "Please define them (e.g., in your environment or .env file) before running this script."
+    )
 START_DATE = "01/01/2025"  # or make these parameters too DD/MM/YYYY
 END_DATE   = "31/12/2025"
 
