@@ -46,9 +46,10 @@ with sync_playwright() as p:
     print("Search submitted! URL:", page.url)
 
     # --- GET RECORD COUNT ---
-    count = page.locator("td.query_result_paginas b").inner_text()
-    print(f"Records found: {count}")
-    total = int(count)
+    raw_count = page.locator("td.query_result_paginas b").inner_text()
+    count_text = raw_count.strip().replace(",", "").replace(".", "")
+    print(f"Records found: {count_text}")
+    total = int(count_text)
 
     # --- CLICK FIRST RESULT ---
     page.locator("tr.queryresult").first.click()
