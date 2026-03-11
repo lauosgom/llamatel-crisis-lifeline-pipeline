@@ -77,4 +77,57 @@ sintesis
 4. dbt
 5. 
 
+## Project structure
+
+my-project/  
+│  
+├── terraform/                        # Cloud infrastructure  
+│   ├── main.tf  
+│   ├── variables.tf  
+│   ├── outputs.tf  
+│   └── modules/  
+│       ├── gcs/                      # GCS data lake bucket  
+│       └── bigquery/                 # BQ datasets & tables  
+│  
+├── ingestion/                        # Steps 1–3: download, extract, upload  
+│   ├── scraper.py                    # (1) Download PDFs from webpage  
+│   ├── extractor.py                  # (2) Extract data from PDFs → DataFrame  
+│   └── uploader.py                   # (3) Upload PDFs to GCS  
+│
+├── warehouse/                        # Step 4: BigQuery loading  
+│   └── loader.py                     # Merge DataFrame into BQ table  
+│  
+├── transform/                        # Step 5: dbt transformations  
+│   ├── dbt_project.yml  
+│   ├── profiles.yml  
+│   ├── models/  
+│   │   ├── staging/                  # Raw → cleaned models  
+│   │   └── marts/                    # End table(s) for dashboard  
+│   └── tests/  
+│  
+├── orchestration/                    # Step 6: Prefect flows & tasks  
+│   ├── flows/  
+│   │   └── main_flow.py              # Master flow wiring everything together  
+│   ├── tasks/  
+│   │   ├── scrape_task.py  
+│   │   ├── extract_task.py  
+│   │   ├── upload_task.py  
+│   │   ├── load_task.py  
+│   │   └── dbt_task.py  
+│   └── deployments/  
+│       └── deployment.py             # Prefect deployment config  
+│  
+├── config/                           # Shared config & secrets references  
+│   └── settings.py                   # Env vars, GCS bucket names, BQ IDs, etc.  
+│  
+├── tests/                            # Unit & integration tests  
+│   ├── test_scraper.py  
+│   ├── test_extractor.py  
+│   └── test_loader.py  
+│  
+├── .env.example                      # Template for required env vars  
+├── requirements.txt  
+├── Dockerfile                        # Optional: containerized Prefect worker  
+└── README.md  
+
 ## Dashboard
