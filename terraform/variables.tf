@@ -23,11 +23,6 @@ variable "bq_dataset_name" {
   default     = "calls_dataset"
 }
 
-variable "bq_dataset_name_demo" {
-  description = "BigQuery Dataset Name for demo and practice zoomcamp"
-  default     = "demo_dataset"
-}
-
 variable "gcs_bucket_name" {
   description = "GCS Bucket Name"
   default     = "singular-arbor-401018-calls-bucket"

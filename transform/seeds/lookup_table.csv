@@ -1,0 +1,174 @@
+campo,codigo,valor
+medio_contacto,1,Por teléfono
+medio_contacto,2,Atendido en sede
+medio_contacto,3,Por email
+medio_contacto,7,Programa de atención a personas mayores
+medio_contacto,8,Chat TE
+llamante_sexo,0,No lo sé
+llamante_sexo,1,Hombre
+llamante_sexo,2,Mujer
+llamante_edad,1,Hast 18 años
+llamante_edad,2,De 19 a 25
+llamante_edad,3,De 26 a 35
+llamante_edad,4,De 36 a 45
+llamante_edad,5,De 46 a 56
+llamante_edad,6,De 55 a 65
+llamante_edad,7,de 66 a 75
+llamante_edad,8,76 o mas
+llamante_edad,9,"Si, definir"
+llamante_estado_civil,0,No lo sé
+llamante_estado_civil,1,Soltero
+llamante_estado_civil,2,Casado
+llamante_estado_civil,3,Viudo
+llamante_estado_civil,4,Separado/Divorciado
+llamante_estado_civil,5,Matrimonio nulo
+llamante_estado_civil,6,Pareja de hecho
+llamante_convive,0,No lo sé
+llamante_convive,1,Solo
+llamante_convive,2,Familia de origen
+llamante_convive,3,Familia propia
+llamante_convive,4,Pareja de hecho
+llamante_convive,5,Pareja Homosexual
+llamante_convive,6,Domicilio de los hijos casados o emancipados
+llamante_convive,7,Con otros parientes
+llamante_convive,8,Residencia o institución benéfica
+llamante_convive,9,Piso compartido
+llamante_asiduidad,0,No lo sé
+llamante_asiduidad,1,Primera llamada
+llamante_asiduidad,2,Ha llamado mas veces por el mismo asunto
+llamante_asiduidad,3,Ha llamado mas veces en otras crisis
+llamante_asiduidad,4,Llamante frecuente
+llamante_naturaleza,1,Problema Leve
+llamante_naturaleza,2,Problema Grave
+llamante_naturaleza,3,Problema Crónico
+llamante_naturaleza,4,Crisis actual por situación externa
+llamante_naturaleza,5,Crisis actual por procesos internos o evolutivos
+llamante_inicio,1,Menos de 1 semana
+llamante_inicio,2,Entre 1 semana y 1 mes
+llamante_inicio,3,Mas de 1 mes y menos de 1 año
+llamante_inicio,4,Mas de 1 año
+llamante_actitud_orientador,1,Confiada
+llamante_actitud_orientador,2,Desconfiada
+llamante_actitud_orientador,3,Dependiente
+llamante_actitud_orientador,4,Enfadada
+llamante_actitud_orientador,5,Agresiva
+llamante_actitud_orientador,6,Ansiosa
+llamante_actitud_orientador,7,Desorientada
+llamante_presentacion,0,No lo sé
+llamante_presentacion,1,Clara y directa
+llamante_presentacion,2,Con rodeos
+llamante_presentacion,3,Dubitativa
+llamante_presentacion,4,Abstracta e impersal
+llamante_presentacion,5,Muy prolija
+llamante_presentacion,6,Muy escueta
+llamante_presentacion,7,Exagera la Graveda
+llamante_presentacion,8,Minimiza el problema
+llamante_presentacion,9,Comunicación Congruente
+llamante_presentacion,10,Comunicaión Incongruente
+llamante_paralenguaje,0,No lo sé
+llamante_paralenguaje,1,No significativo
+llamante_paralenguaje,2,Silencios
+llamante_paralenguaje,3,Suspiros
+llamante_paralenguaje,4,Sollozos
+llamante_paralenguaje,5,Ritmo o tono de voz alterados
+llamante_paralenguaje,6,Respiración entrecortada
+llamante_paralenguaje,7,Risas nerviosas
+llamante_procedencia,0,"No lo sé,"
+llamante_procedencia,1,De la misma población del centro del Telefono
+llamante_procedencia,2,De la misma provincia del Telefono
+llamante_procedencia,3,De otra provincia
+llamante_procedencia,4,De otro país europeo
+llamante_procedencia,5,"De otro país latinoamericano,"
+llamante_procedencia,6,De otros países
+llamante_procedencia,7,Derivada del 112
+llamante_procedencia,8,De un País a la U.E
+llamante_peticion,0,No lo sé
+llamante_peticion,1,Simple información
+llamante_peticion,2,Hablar o de desahogarse con alguien
+llamante_peticion,3,Orientación
+llamante_peticion,4,Consultar el teléfono de un Especialista
+llamante_peticion,5,"Soluciones inmediatas,"
+llamante_peticion,6,"Aprobación de una decisión, tomada"
+llamante_peticion,7,Asistencia a domicilio
+llamante_peticion,8,Personarse en la sede
+llamante_peticion,9,Entrevista con un profesional
+llamante_actitud_problema,0,No lo sé
+llamante_actitud_problema,1,Niega tener un problema
+llamante_actitud_problema,2,Cree que no tiene solución
+llamante_actitud_problema,3,Pasivo y sin deseos de colaborar con la solución del problema
+llamante_actitud_problema,4,"Se reconoce responsable, al menos parcialmente"
+llamante_actitud_problema,5,Se siente impotente para resolver el problema
+llamante_actitud_problema,6,Muestra deseos de colaborar para resolver el problema
+llamante_actitud_problema,7,Se siente muy culpabilizado
+llamante_actitud_problema,8,Preocupado
+llamante_actitud_problema,9,Desesperado
+llamante_actitud_problema,10,Exagera la importancia del problema
+llamante_actitud_problema,11,Minimiza la importancia del problema
+llamante_actitud_problema,12,Cree que que sólo los demás tienen la culpa del problema
+llamante_llamada_derivada,1,Servicio 112
+llamante_llamada_derivada,2,Tráfico UVAT
+llamante_llamada_derivada,3,Médico de Familia
+llamante_llamada_derivada,4,Servicios de salud mental/psiquiatra
+llamante_llamada_derivada,5,"Servicios sociales,"
+llamante_llamada_derivada,6,Policía nacional
+llamante_llamada_derivada,7,Guardia civil
+llamante_llamada_derivada,8,Fundación Anar
+llamante_llamada_derivada,9,Programa SUMATE
+llamante_llamada_derivada,10,Acompañandote 24/7
+llamante_llamada_derivada,11,Teléfono 024
+llamante_llamada_derivada,12,As. V.Frankl
+llamada_resultado,1,"Se satisface la demanda del llamante, sólo con la llamada"
+llamada_resultado,2,Seguimiento programado por el Telefono
+llamada_resultado,3,Se recomienda entrevista con profesional del Telefono
+llamada_resultado,5,Se le da entrevista con un profesional
+llamada_resultado,6,Se le invita que llame cuando lo necesite
+llamada_resultado,7,Venir a la sede inmediatamente
+llamada_resultado,8,Se deriva a otros profesionales o instituciones
+llamada_resultado,9,No se acepta la ayuda que se le ofrece
+llamada_resultado,10,Llamada incompleta
+llamada_resultado,11,Se le deriva hacia otros programas del teléfono
+llamada_resultado,13,"A la persona atendida en la sede, se le invita en general a que venga otras veces, si lo necesita"
+llamada_resultado,14,se le deriva la llamada a la fundación Anar
+orientador_nivel_ayuda,2,"Orientaciones puntuales,"
+orientador_nivel_ayuda,3,"Acción de des angustiante,"
+orientador_nivel_ayuda,4,Compresión empática
+orientador_nivel_ayuda,5,Restructuración del problema
+orientador_nivel_ayuda,6,programación de nuevos comportamientos
+orientador_sentimientos,1,Compasión
+orientador_sentimientos,2,Afecto
+orientador_sentimientos,4,Aceptación y respeto
+orientador_sentimientos,5,Cercanía
+orientador_sentimientos,6,Satisfacción
+orientador_sentimientos,8,Implicación personal/simpatía
+orientador_sentimientos,9,Bloqueo
+orientador_sentimientos,11,Confusión
+orientador_sentimientos,12,Indiferencia
+orientador_sentimientos,14,Incomodidad
+orientador_sentimientos,16,Impotencia
+orientador_autoevaluacion,2,Deficiente
+orientador_autoevaluacion,3,Regular
+orientador_autoevaluacion,4,"Positiva,"
+orientador_actitudes_equivocadas,1,"Dirigir, presionar"
+orientador_actitudes_equivocadas,2,Aconsejar
+orientador_actitudes_equivocadas,3,Moralizar
+orientador_actitudes_equivocadas,5,Consolar
+orientador_actitudes_equivocadas,6,Discutir
+orientador_actitudes_equivocadas,7,Compadecer
+orientador_actitudes_equivocadas,9,Ninguna
+orientador_satisfaccion_llamante,1,No dice nada
+orientador_satisfaccion_llamante,2,Expresa disconformidad
+orientador_satisfaccion_llamante,3,"Expresa satisfacción,"
+orientador_satisfaccion_llamante,5,Cuelga sin concluir el proceso de ayuda
+tercero_relacion,1,Cónyuge o compañero
+tercero_relacion,2,Excónyuge o excompañero
+tercero_relacion,3,Padre/madre
+tercero_relacion,4,Hijo/hija
+tercero_relacion,5,Hijo/hija del otro miembro de la pareja
+tercero_relacion,10,"Amigo, vecino, compañero"
+tercero_relacion,13,Otros familiares
+tercero_actitud_problema,2,El llamante no se atreve a proponerselo
+tercero_actitud_problema,3,"El tercero, niega la existencia del problema"
+tercero_actitud_problema,4,"El tercero, piensa que el llamante es el responsable total del problema"
+tercero_actitud_problema,5,No se muestran deseos de querer colaborar con la solución del problema
+tercero_actitud_problema,6,"El tercero reconoce que él colabora, al menos parcialmente en el problema"
+tercero_actitud_problema,7,Desea resolver el problema

@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: lookup_table
+    config:
+      column_types:
+        codigo: string
+  - name: problematica_problema
+    config:
+      column_types:
+        codigo_problema: string
