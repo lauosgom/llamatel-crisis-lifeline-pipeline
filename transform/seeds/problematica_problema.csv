@@ -1,0 +1,145 @@
+codigo,codigo_problematica,problematica,codigo_problema,problema
+A1,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,1,Crisis en el proyecto vital. Crisis de valores y de sentido
+A2,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,2,Soledad e incomunicación
+A3,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,3,Estado deprimido
+A4,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,4,Vivencia de duelo
+A5,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,5,Ideas suicidas
+A6,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,6,Crisis suicidas
+A7,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,7,Acto suicida en curso
+A8,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,8,"Trastornos de ansiedad (crisis de ansiedad, ansiedad generalizada, fobia, obsesiones, histeria)"
+A9,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,9,Trastorno de la personalidad
+A10,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,10,"Trastorno psicótico (esquizofrenia, trastorno delirante)."
+A11,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,11,Abuso o dependencia de sustancias psicoactivas
+A12,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,12,Abuso o dependencia del alcohol
+A13,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,13,Jugador habitual
+A14,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,14,Adicción a nuevas tecnologías
+A15,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,15,Anorexia.
+A16,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,16,Bulimia.
+A17,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,17,Problema por insomnio.
+A18,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,18,Trastorno por identidad sexual.
+A19,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,19,Trastornos del comportamiento sexual
+A20,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,20,Disfunciones sexuales
+A21,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,21,Crisis por haber sufrido violación o intento de violación recientemente
+A22,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,22,Persona con problemas psicológicos por haber sufrido abusos sexuales recientemente
+A23,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,23,Persona con problemas psicológicos por haber sufrido abusos sexuales en el pasado
+A24,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,24,Crisis por aborto deseado o consumado
+A25,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,25,Fracaso escolar
+A26,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,26,Niño o adolescente con problemas psicológicos
+A27,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,27,"Problema por enfermedad terminal (Sida, cáncer, etc.)"
+A28,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,28,Problema por enfermedad grave (no terminal ni crónica)
+A29,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,29,Enfermedad o problema médico no grave
+A30,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,30,Enfermedad crónica grave (no necesariamente terminal)
+A31,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,31,"Problema por un ""cambio externo"""
+A32,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,32,Síndrome del jubilado
+A33,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,33,Síndrome del ama de casa
+A34,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,34,Síndrome del cuidador
+A35,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,35,Problema por situación de parado
+A36,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,36,Trastorno mental
+A37,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,37,Abuso o dependencia de sustancias (Alcohol o drogas)
+A38,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,38,Otras adicciones
+A39,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,39,Trastornos de la alimentación
+A40,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,40,Crisis o problema por enfermedad
+A41,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,41,Crisis psicologica/emocional por CORONAVIRUS
+A42,A,PROBLEMAS PSICOLÓGICOS Y PSIQUIÁTRICOS,42,(ALNS) Autolesiones No Suicidas
+B1,B,PROBLEMAS RELACIONALES y-o FAMILIARES,1,"Crisis de noviazgo ""por el llamante"""
+B2,B,PROBLEMAS RELACIONALES y-o FAMILIARES,2,"Crisis de noviazgo ""por un tercero"""
+B3,B,PROBLEMAS RELACIONALES y-o FAMILIARES,3,"Crisis de noviazgo ""simétrica"""
+B4,B,PROBLEMAS RELACIONALES y-o FAMILIARES,4,"Crisis de matrimonio ""por el llamante"""
+B5,B,PROBLEMAS RELACIONALES y-o FAMILIARES,5,"Crisis de matrimonio ""por un tercero"""
+B6,B,PROBLEMAS RELACIONALES y-o FAMILIARES,6,"Crisis de matrimonio ""simétrica"""
+B7,B,PROBLEMAS RELACIONALES y-o FAMILIARES,7,"Problema de pareja de hecho ""por el llamante"""
+B8,B,PROBLEMAS RELACIONALES y-o FAMILIARES,8,"Problema de pareja de hecho ""por un tercero"""
+B9,B,PROBLEMAS RELACIONALES y-o FAMILIARES,9,"Problema de pareja de hecho ""simétrico"""
+B10,B,PROBLEMAS RELACIONALES y-o FAMILIARES,10,Conducta infiel
+B11,B,PROBLEMAS RELACIONALES y-o FAMILIARES,11,"Problema familiar ""por el llamante"""
+B12,B,PROBLEMAS RELACIONALES y-o FAMILIARES,12,"Problema familiar ""simétrico"""
+B13,B,PROBLEMAS RELACIONALES y-o FAMILIARES,13,"Problema familiar ""por un tercero"""
+B14,B,PROBLEMAS RELACIONALES y-o FAMILIARES,14,"Escasas habilidades sociales : timidez, introversión"
+B15,B,PROBLEMAS RELACIONALES y-o FAMILIARES,15,Problemas sentimentales
+B16,B,PROBLEMAS RELACIONALES y-o FAMILIARES,16,Crisis por ruptura amorosa
+B17,B,PROBLEMAS RELACIONALES y-o FAMILIARES,17,Problema por falta de autonomía afectiva
+B18,B,PROBLEMAS RELACIONALES y-o FAMILIARES,18,Problema por deterioro o ruptura de amistad
+B19,B,PROBLEMAS RELACIONALES y-o FAMILIARES,19,Inflige malos tratos físicos a extraÃ±os
+B20,B,PROBLEMAS RELACIONALES y-o FAMILIARES,20,Inflige malos tratos psíquicos a extraÃ±os
+B22,B,PROBLEMAS RELACIONALES y-o FAMILIARES,22,Sufre malos tratos físicos de extraÃ±os
+B23,B,PROBLEMAS RELACIONALES y-o FAMILIARES,23,Sufre malos tratos psíquicos de extraÃ±os
+B24,B,PROBLEMAS RELACIONALES y-o FAMILIARES,24,Sufre malos tratos sexuales de extraÃ±os
+B25,B,PROBLEMAS RELACIONALES y-o FAMILIARES,25,Inflige malos tratos físicos a familiares
+B26,B,PROBLEMAS RELACIONALES y-o FAMILIARES,26,Inflige malos tratos psíquicos a familiares
+B27,B,PROBLEMAS RELACIONALES y-o FAMILIARES,27,Inflige malos tratos sexuales a familiares
+B28,B,PROBLEMAS RELACIONALES y-o FAMILIARES,28,Sufre malos tratos físicos de familiares
+B29,B,PROBLEMAS RELACIONALES y-o FAMILIARES,29,Sufre malos tratos psíquicos de familiares
+B30,B,PROBLEMAS RELACIONALES y-o FAMILIARES,30,Sufre malos tratos sexuales de familiares
+B31,B,PROBLEMAS RELACIONALES y-o FAMILIARES,31,Problema generacional
+B32,B,PROBLEMAS RELACIONALES y-o FAMILIARES,32,Problema con hijos concebidos en anteriores relaciones
+B33,B,PROBLEMAS RELACIONALES y-o FAMILIARES,33,Problemas con hijos de su actual cónyuge
+B34,B,PROBLEMAS RELACIONALES y-o FAMILIARES,34,Crisis o problema de pareja
+B35,B,PROBLEMAS RELACIONALES y-o FAMILIARES,35,Problema familiar
+B36,B,PROBLEMAS RELACIONALES y-o FAMILIARES,36,Inflige malos tratos
+B37,B,PROBLEMAS RELACIONALES y-o FAMILIARES,37,"Sufre malos tratos (Físicos, psicológicos o sexuales"
+C1,C,PROBLEMAS ASISTENCIALES,1,"Mujer embarazada (casada, soltera, viuda o separada)"
+C2,C,PROBLEMAS ASISTENCIALES,2,Madre soltera
+C3,C,PROBLEMAS ASISTENCIALES,3,Minusválido físico y-o psíquico.
+C4,C,PROBLEMAS ASISTENCIALES,4,"Anciano, enfermo físico"
+C5,C,PROBLEMAS ASISTENCIALES,5,Enfermo psíquico
+C6,C,PROBLEMAS ASISTENCIALES,6,DrogAdicción
+C7,C,PROBLEMAS ASISTENCIALES,7,Alcoholismo
+C8,C,PROBLEMAS ASISTENCIALES,8,Ludopatías
+C9,C,PROBLEMAS ASISTENCIALES,9,Demanda de trabajo.
+C10,C,PROBLEMAS ASISTENCIALES,10,Oferta de trabajo
+C11,C,PROBLEMAS ASISTENCIALES,11,"Persona que necesita ""residencia de emergencia"" por malos tratos en el hogar"
+C12,C,PROBLEMAS ASISTENCIALES,12,Otros problemas sociales
+C13,C,PROBLEMAS ASISTENCIALES,13,Problemática derivada del paro
+C14,C,PROBLEMAS ASISTENCIALES,14,Inmigrantes (Problemática psico-socio-laboral)
+C15,C,PROBLEMAS ASISTENCIALES,15,Transeúntes
+C16,C,PROBLEMAS ASISTENCIALES,16,Problema derivado de pertenencia a minoría étnica
+C17,C,PROBLEMAS ASISTENCIALES,17,Prostitución
+C18,C,PROBLEMAS ASISTENCIALES,18,Situación de pobreza severa
+C19,C,PROBLEMAS ASISTENCIALES,19,Reclusos y ex-reclusos
+D1,D,PROBLEMAS JURÍDICOS,1,"Problema legal sobre vivienda, desahucio, arrendamiento y molestias por vecinos"
+D2,D,PROBLEMAS JURÍDICOS,2,"Problema sobre nulidad, separación y divorcio"
+D3,D,PROBLEMAS JURÍDICOS,3,Persona que abandona el domicilio conyugal y-o desasiste a la familia
+D4,D,PROBLEMAS JURÍDICOS,4,Problema por régimen matrimonial de bienes
+D5,D,PROBLEMAS JURÍDICOS,5,Problema de sucesiones hereditarias
+D6,D,PROBLEMAS JURÍDICOS,6,Problema laboral y de Seguridad Social
+D7,D,PROBLEMAS JURÍDICOS,7,Problema por cuestiones penales
+D8,D,PROBLEMAS JURÍDICOS,8,"Problema sobre patria potestad, filiación y tutela"
+D9,D,PROBLEMAS JURÍDICOS,9,Problemática jurídica de los inmigrantes.
+D10,D,OTROS PROBLEMAS,10,"Otros problemas jurídicos (extranÂ­jería, deudas, contratación en general, etc.)"
+F0,F,OTROS PROBLEMAS,0, Posible LLH
+F1,F,OTROS PROBLEMAS,1,Buen Samaritano
+F2,F,OTROS PROBLEMAS,2,Reactivación de la Crisis.
+F3,F,OTROS PROBLEMAS,3,"Seguimiento en la crisis (Paciente a ""su Orientador"")"
+F4,F,OTROS PROBLEMAS,4,Terapia por teléfono
+F5,F,OTROS PROBLEMAS,5,LLamante habitual
+F6,F,OTROS PROBLEMAS,6,Información sexual
+F7,F,OTROS PROBLEMAS,7,Información médica
+F8,F,OTROS PROBLEMAS,8,Llamante habitual repetidor turno
+F9,F,OTROS PROBLEMAS,9,Problemas religiosos o éticos
+F10,F,OTROS PROBLEMAS,10,Desinformación sobre un tema concreto
+P1,P,LLAMADAS PERIFÉRICAS,1,Llamada silenciosa
+P2,P,LLAMADAS PERIFÉRICAS,2,Petición expresa de un profesional
+P3,P,LLAMADAS PERIFÉRICAS,3,Llamada de agradecimiento por atención recibida
+P4,P,LLAMADAS PERIFÉRICAS,4,Llamada de reproche
+P5,P,LLAMADAS PERIFÉRICAS,5,Llamada de paciente a profesional
+P6,P,LLAMADAS PERIFÉRICAS,6,Información sobre persona atendida en el T. E
+P7,P,LLAMADAS PERIFÉRICAS,7,Petición de ayuda inmediata a domicilio
+P8,P,LLAMADAS PERIFÉRICAS,8,Información acerca del T. E
+P9,P,LLAMADAS PERIFÉRICAS,9,Información sobre actividades desarrolladas por el T.E
+P10,P,LLAMADAS PERIFÉRICAS,10,Ofrecimiento como colaborador
+P11,P,LLAMADAS PERIFÉRICAS,11,Oferta de recursos
+P12,P,LLAMADAS PERIFÉRICAS,12,Petición de acudir a sede para ser atendido personalmente.
+P13,P,LLAMADAS PERIFÉRICAS,13,"Nueva petición de entrevista con el mismo Profesional, no siendo la primeÂ­ra entrevisÂ­ta"
+P14,P,LLAMADAS PERIFÉRICAS,14,Anulación o cambio de hora de la entrevista
+P15,P,LLAMADAS PERIFÉRICAS,15,Información de recursos para personas solitarias
+P16,P,LLAMADAS PERIFÉRICAS,16,Información de recursos de drogadicción.
+P17,P,LLAMADAS PERIFÉRICAS,17,Información de recursos de alcoholismo
+P18,P,LLAMADAS PERIFÉRICAS,18,Información de recursos de ludopaÂ­tías
+P19,P,LLAMADAS PERIFÉRICAS,19,Información de otros recursos sociales
+P20,P,LLAMADAS PERIFÉRICAS,20,Información general
+P21,P,LLAMADAS PERIFÉRICAS,21,Llamada incompleta
+P22,P,LLAMADAS PERIFÉRICAS,22,Solicita hablar con un responsable del T.E.
+P23,P,LLAMADAS PERIFÉRICAS,23,Información sobre el T.E y sus actividades
+P24,P,LLAMADAS PERIFÉRICAS,24,Información de otros recursos ajenos al T.E
+P25,P,LLAMADAS PERIFÉRICAS,25,Confirmación de entrevista
+P26,P,LLAMADAS PERIFÉRICAS,26,AcompaÃ±amiento a personas mayores
