@@ -72,13 +72,6 @@ orientador_actitudes_equivocadas:
 orientador_satisfaccion_llamante:  
 
 sintesis
-## Technologies
-
-1. Create service account and save keys
-2. Terraform create bucket and bigquery dataset
-3. Kestra: upload data to bigquery table
-4. dbt
-5. 
 
 ## Project structure
 ```bash
