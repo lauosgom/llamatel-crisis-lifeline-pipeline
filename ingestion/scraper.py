@@ -12,7 +12,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
     _end = end_date or END_DATE
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context(
             accept_downloads=True,
             viewport={"width": 1280, "height": 720},

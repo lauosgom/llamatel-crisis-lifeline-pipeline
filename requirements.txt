@@ -1,0 +1,12 @@
+pandas
+pdfplumber
+playwright
+ftfy
+google-cloud-storage
+google-cloud-bigquery
+db-dtypes
+pandas-gbq
+python-dotenv
+prefect
+google-auth
+pyarrow
