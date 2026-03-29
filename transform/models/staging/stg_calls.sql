@@ -2,6 +2,8 @@ select
  --identifiers
  codigo_numero,
  codigo_letras,
+ imported_at,
+ gcs_path,
 
  --general call info
  medio_contacto, 

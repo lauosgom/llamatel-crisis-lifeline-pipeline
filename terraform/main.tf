@@ -335,6 +335,18 @@ resource "google_bigquery_table" "table-test-yellow" {
     "type": "STRING",
     "mode": "NULLABLE",
     "description": "Source PDF filename."
+  },
+  {
+    "name": "imported_at",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Datetime when the record was imported."
+  },
+  {
+    "name": "gcs_path",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "GCS path of the source PDF."
   }
 ]
 EOF

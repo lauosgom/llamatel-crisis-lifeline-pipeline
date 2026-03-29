@@ -6,10 +6,22 @@ with lookup_table as (
     from {{ ref('lookup_table') }}
 )
 
+deduped as (
+    select
+        *,
+        row_number() over (
+            partition by codigo_id
+            order by llamada_datetime desc
+        ) as rn
+    from {{ ref('int_calls_parsed') }}
+),
+
 select
     --identifiers
     codigo_numero,
     codigo_letras,
+    imported_at,
+    gcs_path,
 
     --general call info
     contacto.valor as medio_contacto,
@@ -79,7 +91,8 @@ select
     orientadorSatisfaccionLlamante.valor as orientador_satisfaccion_llamante
 
 
-from {{ ref('int_calls_parsed') }} parsed
+from deduped parsed
+where rn = 1
 
 --medio_contacto
 left join lookup_table contacto

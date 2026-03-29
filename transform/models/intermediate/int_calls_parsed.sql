@@ -4,7 +4,7 @@ with source as (
 
 parsed as (
     select
-        * except(llamante_problema, tercero_problema),
+        * except(llamante_problema, tercero_problema, codigo_letras, codigo_numero),
 
         -- llamante_problema: up to 3 pairs
         regexp_replace(
@@ -41,6 +41,9 @@ parsed as (
         -- combined datetime columns
         datetime(llamada_fecha, llamada_hora)       as llamada_datetime,
         datetime(entrevista_fecha, entrevista_hora) as entrevista_datetime
+
+        -- combined codes
+        concat(codigo_letras, "-" ,cast(codigo_numero as STRING)) as codigo_id,
 
     from source
 )

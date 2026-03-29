@@ -3,10 +3,11 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from datetime import datetime, timezone
 import pandas as pd
 from google.cloud import bigquery
 from google.oauth2 import service_account
-from config.settings import GCS_CREDENTIALS_JSON, GCP_PROJECT_ID, BQ_DATASET_RAW, BQ_TABLE_CALLS
+from config.settings import GCS_CREDENTIALS_JSON, GCP_PROJECT_ID, BQ_DATASET_RAW, BQ_TABLE_CALLS, GCS_BUCKET_NAME, GCS_PDF_PREFIX
 import json
 
 
@@ -68,11 +69,19 @@ def load(df: pd.DataFrame) -> None:
 
     df = _prepare_df(df)
 
+    # add import datetime
+    df["imported_at"] = datetime.now(timezone.utc)
+
     # Check if record already exists
     filename = df["filename"].iloc[0]
     query = f"SELECT COUNT(*) as count FROM `{table_id}` WHERE filename = '{filename}'"
     result = client.query(query).result()
     count = next(result)["count"]
+
+    # pdf location in GCS - derive from filename
+    filename_bucket = os.path.basename(df["filename"].iloc[0])
+    date_folder = datetime.now(timezone.utc).strftime("%Y_%m_%d")
+    df["gcs_path"] = f"gs://{GCS_BUCKET_NAME}/{GCS_PDF_PREFIX}/{date_folder}/{filename_bucket}"
 
     if count > 0:
         print(f"Skipping {filename}, already in BigQuery.")

@@ -11,6 +11,8 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
     _start = start_date or START_DATE
     _end = end_date or END_DATE
 
+    TIMEOUT = 30000  # 30 seconds in milliseconds
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(
@@ -20,6 +22,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             extra_http_headers={"Accept-Language": "es-ES,es;q=0.9"}
         )
         page = context.new_page()
+        page.set_default_timeout(TIMEOUT)
 
         def login():
             page.goto(BASE_URL)
@@ -27,12 +30,12 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             page.fill("input[name='usuario_auth_login']", BOT_USERNAME)
             page.fill("input[name='clave_auth_login']", BOT_PASSWORD)
             page.click("input[value='Entrar']")
-            page.wait_for_load_state("networkidle")
+            page.wait_for_load_state("networkidle", timeout=TIMEOUT)
             print("Logged in! Current URL:", page.url)
 
         def search_records() -> int:
             page.click("a[href='?class=llamadas&menu_pos=2']")
-            page.wait_for_load_state("networkidle")
+            page.wait_for_load_state("networkidle", timeout=TIMEOUT)
             page.fill("input[name='desde']", _start)
             page.fill("input[name='hasta']", _end)
             page.locator("input.botones[value='Buscar >>']").click()
@@ -66,7 +69,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             next_link = page.locator("a:has-text('Siguiente')")
             if next_link.count() > 0:
                 next_link.click()
-                page.wait_for_load_state("networkidle")
+                page.wait_for_load_state("networkidle", timeout=TIMEOUT)
                 return True
             return False
 
@@ -74,7 +77,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
         login()
         total = search_records()
         page.locator("tr.queryresult").first.click()
-        page.wait_for_load_state("networkidle")
+        page.wait_for_load_state("networkidle", timeout=TIMEOUT)
 
         for i in range(total):
             print(f"Processing record {i + 1}/{total}...")
