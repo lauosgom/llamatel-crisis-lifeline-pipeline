@@ -35,7 +35,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
 
         def search_records() -> int:
             page.click("a[href='?class=llamadas&menu_pos=2']")
-            page.wait_for_load_state("networkidle", timeout=TIMEOUT)
+            page.wait_for_load_state("domcontentloaded")
             page.fill("input[name='desde']", _start)
             page.fill("input[name='hasta']", _end)
             page.locator("input.botones[value='Buscar >>']").click()
@@ -69,7 +69,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             next_link = page.locator("a:has-text('Siguiente')")
             if next_link.count() > 0:
                 next_link.click()
-                page.wait_for_load_state("networkidle", timeout=TIMEOUT)
+                page.wait_for_load_state("domcontentloaded")
                 return True
             return False
 
