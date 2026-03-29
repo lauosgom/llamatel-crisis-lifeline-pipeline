@@ -13,6 +13,8 @@ def dbt_task() -> None:
         capture_output=True,
         text=True
     )
-    print(result.stdout)
+    print("STDOUT:", result.stdout)
+    print("STDERR:", result.stderr)
+    print("Return code:", result.returncode)
     if result.returncode != 0:
-        raise Exception(result.stderr)
+        raise Exception(result.stdout + result.stderr)
