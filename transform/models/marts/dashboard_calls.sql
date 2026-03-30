@@ -4,7 +4,7 @@ with lookup_table as (
         cast(codigo as STRING) as codigo,
         valor
     from {{ ref('lookup_table') }}
-)
+),
 
 deduped as (
     select
@@ -14,7 +14,7 @@ deduped as (
             order by llamada_datetime desc
         ) as rn
     from {{ ref('int_calls_parsed') }}
-),
+)
 
 select
     --identifiers
