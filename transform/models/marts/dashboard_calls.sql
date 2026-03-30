@@ -18,8 +18,7 @@ deduped as (
 
 select
     --identifiers
-    codigo_numero,
-    codigo_letras,
+    codigo_id,
     imported_at,
     gcs_path,
 
