@@ -4,7 +4,7 @@ with source as (
 
 parsed as (
     select
-        * except(llamante_problema, tercero_problema, codigo_letras, codigo_numero, llamada_fecha, llamada_hora, entrevista_fecha, entrevista_hora, orientador_clave_letras, orientador_clave_numero, llamante_actitud_problema, tercero_actitud_problema, orientador_nivel_ayuda, orientador_sentimientos, orientador_actitudes_equivocadas, orientador_satisfaccion_llamante),
+        *, 
 
         -- llamante_problema: up to 3 pairs
         regexp_replace(
@@ -77,5 +77,5 @@ parsed as (
     from source
 )
 
-select * except(llamada_fecha, llamada_hora, entrevista_fecha, entrevista_hora)
+select * except(llamante_problema, tercero_problema, codigo_letras, codigo_numero, llamada_fecha, llamada_hora, entrevista_fecha, entrevista_hora, orientador_clave_letras, orientador_clave_numero, llamante_actitud_problema, tercero_actitud_problema, orientador_nivel_ayuda, orientador_sentimientos, orientador_actitudes_equivocadas, orientador_satisfaccion_llamante),
 from parsed
