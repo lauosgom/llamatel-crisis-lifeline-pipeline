@@ -56,7 +56,9 @@ select
     actitudOrientador.valor as llamante_actitud_orientador,
     COALESCE(presentacion.valor, 'No lo sé') as llamante_presentacion,
     COALESCE(paralenguaje.valor, 'No lo sé') as llamante_paralenguaje,
-    COALESCE(actitudProblema.valor, 'No lo sé') as llamante_actitud_problema,
+
+    COALESCE(actitudProblema_1.valor, 'No lo sé') as llamante_actitud_problema_1,
+    actitudProblema_2.valor as llamante_actitud_problema_2,
 
     --third party
     terceroSexo.valor as tercero_sexo,
@@ -75,7 +77,8 @@ select
     tp3.problematica as tercero_problematica_3,
     tp3.problema     as tercero_problema_3,
 
-    actitudProblemaTercero.valor as tercero_actitud_problema,
+    COALESCE(actitudProblemaTercero_1.valor, 'No lo sé') as tercero_actitud_problema_1,
+    actitudProblemaTercero_2.valor as tercero_actitud_problema_2,
 
     --interview info
     entrevista_clave,
@@ -83,12 +86,22 @@ select
     entrevista_datetime,
 
     --orientador info
-    orientador_nivel_ayuda,
-    orientadorSentimientos.valor as orientador_sentimientos,
-    orientadorAutoevaluacion.valor as orientador_autoevaluacion,
-    orientadorActitudesEquivocadas.valor as orientador_actitudes_equivocadas,
-    orientadorSatisfaccionLlamante.valor as orientador_satisfaccion_llamante
+    orientador_clave,
 
+    --orientator perception of call
+    orientador_nivel_ayuda_1,
+    orientador_nivel_ayuda_2,
+
+    orientadorSentimientos_1.valor as orientador_sentimientos_1,
+    orientadorSentimientos_2.valor as orientador_sentimientos_2,
+
+    orientadorAutoevaluacion.valor as orientador_autoevaluacion,
+
+    orientadorActitudesEquivocadas_1.valor as orientador_actitudes_equivocadas_1,
+    orientadorActitudesEquivocadas_2.valor as orientador_actitudes_equivocadas_2,
+
+    orientadorSatisfaccionLlamante_1.valor as orientador_satisfaccion_llamante_1,
+    orientadorSatisfaccionLlamante_2.valor as orientador_satisfaccion_llamante_2
 
 from deduped parsed
 
@@ -178,9 +191,13 @@ left join lookup_table paralenguaje
     and paralenguaje.codigo = parsed.llamante_paralenguaje
 
 --llamante_actitud_problema
-left join lookup_table actitudProblema
-    on actitudProblema.campo = 'llamante_actitud_problema'
-    and actitudProblema.codigo = parsed.llamante_actitud_problema
+left join lookup_table actitudProblema_1
+    on actitudProblema_1.campo = 'llamante_actitud_problema'
+    and actitudProblema_1.codigo = parsed.llamante_actitud_problema_1
+
+left join lookup_table actitudProblema_2
+    on actitudProblema_2.campo = 'llamante_actitud_problema'
+    and actitudProblema_2.codigo = parsed.llamante_actitud_problema_2
 
 --tercero_sexo
 left join lookup_table terceroSexo
@@ -218,16 +235,24 @@ left join {{ref('problematica_problema')}} tp3
     on parsed.tercero_problema_3 = tp3.codigo
 
 --tercero actitud problema
-left join lookup_table actitudProblemaTercero
-    on actitudProblemaTercero.campo = 'tercero_actitud_problema'
-    and actitudProblemaTercero.codigo = parsed.tercero_actitud_problema
+left join lookup_table actitudProblemaTercero_1
+    on actitudProblemaTercero_1.campo = 'tercero_actitud_problema'
+    and actitudProblemaTercero_1.codigo = parsed.tercero_actitud_problema_1
+
+left join lookup_table actitudProblemaTercero_2
+    on actitudProblemaTercero_2.campo = 'tercero_actitud_problema'
+    and actitudProblemaTercero_2.codigo = parsed.tercero_actitud_problema_2
 
 --interview info
 
 --orientador sentimientos
-left join lookup_table orientadorSentimientos
-    on orientadorSentimientos.campo = 'orientador_sentimientos'
-    and orientadorSentimientos.codigo = parsed.orientador_sentimientos
+left join lookup_table orientadorSentimientos_1
+    on orientadorSentimientos_1.campo = 'orientador_sentimientos'
+    and orientadorSentimientos_1.codigo = parsed.orientador_sentimientos_1
+
+left join lookup_table orientadorSentimientos_2
+    on orientadorSentimientos_2.campo = 'orientador_sentimientos'
+    and orientadorSentimientos_2.codigo = parsed.orientador_sentimientos_2
 
 --orientador autoevaluacion
 left join lookup_table orientadorAutoevaluacion
@@ -235,13 +260,21 @@ left join lookup_table orientadorAutoevaluacion
     and orientadorAutoevaluacion.codigo = parsed.orientador_autoevaluacion
 
 --orientador actitudes equivocadas
-left join lookup_table orientadorActitudesEquivocadas
-    on orientadorActitudesEquivocadas.campo = 'orientador_actitudes_equivocadas'
-    and orientadorActitudesEquivocadas.codigo = parsed.orientador_actitudes_equivocadas
+left join lookup_table orientadorActitudesEquivocadas_1
+    on orientadorActitudesEquivocadas_1.campo = 'orientador_actitudes_equivocadas'
+    and orientadorActitudesEquivocadas_1.codigo = parsed.orientador_actitudes_equivocadas_1
+
+left join lookup_table orientadorActitudesEquivocadas_2
+    on orientadorActitudesEquivocadas_2.campo = 'orientador_actitudes_equivocadas'
+    and orientadorActitudesEquivocadas_2.codigo = parsed.orientador_actitudes_equivocadas_2
 
 --orientador satisfaccion llamante
-left join lookup_table orientadorSatisfaccionLlamante
-    on orientadorSatisfaccionLlamante.campo = 'orientador_satisfaccion_llamante'
-    and orientadorSatisfaccionLlamante.codigo = parsed.orientador_satisfaccion_llamante
+left join lookup_table orientadorSatisfaccionLlamante_1
+    on orientadorSatisfaccionLlamante_1.campo = 'orientador_satisfaccion_llamante'
+    and orientadorSatisfaccionLlamante_1.codigo = parsed.orientador_satisfaccion_llamante_1
+
+left join lookup_table orientadorSatisfaccionLlamante_2
+    on orientadorSatisfaccionLlamante_2.campo = 'orientador_satisfaccion_llamante'
+    and orientadorSatisfaccionLlamante_2.codigo = parsed.orientador_satisfaccion_llamante_2
 
 where rn = 1
