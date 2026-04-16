@@ -2,8 +2,8 @@ import subprocess
 from pathlib import Path
 from prefect import task
 
-DBT_BIN = Path.home() / "data-engineering-zoomcamp-final-project" / "transform" / ".venv" / "bin" / "dbt"
-DBT_PROJECT_DIR = Path.home() / "data-engineering-zoomcamp-final-project" / "transform"
+DBT_BIN = Path.home() / "llamatel-crisis-lifeline-pipeline" / "transform" / ".venv" / "bin" / "dbt"
+DBT_PROJECT_DIR = Path.home() / "llamatel-crisis-lifeline-pipeline" / "transform"
 
 @task(name="run-dbt", retries=1, retry_delay_seconds=60)
 def dbt_task() -> None:
