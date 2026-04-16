@@ -261,5 +261,6 @@ You can verify that the tables exist in the bigquery datasets and can make any q
 
 View Dashboard: https://lookerstudio.google.com/s/jtvbRpRUCZg
 
-<img width="1679" height="1288" alt="image" src="https://github.com/user-attachments/assets/d82f88fb-62b2-4f26-8060-98a09425ddf0" />
+<img width="944" height="719" alt="image" src="https://github.com/user-attachments/assets/252c72ad-0207-48b9-9e8a-d0b34e7105d4" />
+
 
