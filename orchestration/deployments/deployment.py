@@ -6,7 +6,7 @@ from orchestration.flows.main_flow import main_flow
 
 if __name__ == "__main__":
     main_flow.from_source(
-        source="https://github.com/lauosgom/data-engineering-zoomcamp-final-project.git",
+        source="https://github.com/lauosgom/llamatel-crisis-lifeline-pipeline.git",
         entrypoint="orchestration/flows/main_flow.py:main_flow"
     ).deploy(
         name="llamatel-monthly",
