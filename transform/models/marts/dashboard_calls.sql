@@ -86,7 +86,7 @@ select
     entrevista_datetime,
 
     --orientador info
-    orientador_clave,
+    REGEXP_REPLACE(orientador_clave, r'[ -]', '') AS  orientador_clave,
 
     --orientator perception of call
     orientador_nivel_ayuda_1,

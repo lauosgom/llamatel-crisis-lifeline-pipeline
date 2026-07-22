@@ -9,3 +9,9 @@ seeds:
     config:
       column_types:
         codigo_problema: string
+  - name: codigo_orientador
+    config:
+      column_types:
+        id: string
+        codigo_orientador: string
+        nombre_orientador: string 

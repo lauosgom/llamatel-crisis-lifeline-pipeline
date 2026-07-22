@@ -1,4 +1,11 @@
-with llamatel as (
+with orientador_data as (
+    select
+        co.codigo_orientador,
+        co.nombre_orientador as name_orientador
+    from {{ ref('codigo_orientador') }} co
+),
+
+llamatel as (
     select
         -- identifiers
         codigo_id,
@@ -70,8 +77,9 @@ with llamatel as (
         entrevista_datetime,
 
         -- orientador info
-        CAST(null AS STRING) as orientador,
         orientador_clave,
+        ori.name_orientador as orientador,
+        
 
         -- orientador perception
         orientador_nivel_ayuda_1,
@@ -88,7 +96,11 @@ with llamatel as (
 
         source
 
-    from {{ ref('dashboard_calls') }}
+    from {{ ref('dashboard_calls') }} calls
+    
+    left join orientador_data ori
+    on ori.codigo_orientador = calls.orientador_clave
+
 ),
 
 firebase as (
@@ -163,8 +175,8 @@ firebase as (
         CAST(null AS DATETIME) as entrevista_datetime,
 
         -- orientador info
-        orientador,
-        orientador_clave,
+        src.orientador,
+        src.orientador_clave,
 
         -- orientador perception
         orientador_nivel_ayuda_1,
@@ -181,7 +193,7 @@ firebase as (
 
         source
 
-    from {{ ref('int_calls_firebase_codes') }}
+    from {{ ref('int_calls_firebase_codes') }} src
 )
 
 select * from llamatel
