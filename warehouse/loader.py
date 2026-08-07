@@ -13,12 +13,11 @@ import json
 
 
 def _get_client() -> bigquery.Client:
-    credentials_info = json.loads(GCS_CREDENTIALS_JSON)
-    credentials = service_account.Credentials.from_service_account_info(
-        credentials_info,
+    credentials = service_account.Credentials.from_service_account_file(
+        '/home/lauosgom/credentials.json',
         scopes=["https://www.googleapis.com/auth/cloud-platform"]
     )
-    return bigquery.Client(credentials=credentials, project=GCP_PROJECT_ID)
+    return bigquery.Client(credentials=credentials, project=GCP_PROJECT_ID, location=BQ_LOCATION)
 
 
 def _prepare_df(df: pd.DataFrame) -> pd.DataFrame:
