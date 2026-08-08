@@ -47,6 +47,7 @@ parsed as (
 
         --combine orientador_clave_letras and orientador_clave_numero into orientador_clave
         concat(orientador_clave_letras, '-', cast(orientador_clave_numero as STRING)) as orientador_clave,
+        
 
         --split llamante_actitud_problema by space into two separate columns
         split(llamante_actitud_problema, ' ')[safe_offset(0)] as llamante_actitud_problema_1,
