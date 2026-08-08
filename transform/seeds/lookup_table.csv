@@ -7,7 +7,7 @@ medio_contacto,8,Chat TE
 llamante_sexo,0,No lo sé
 llamante_sexo,1,Hombre
 llamante_sexo,2,Mujer
-llamante_edad,1,Hast 18 años
+llamante_edad,1,Hasta 18 años
 llamante_edad,2,De 19 a 25
 llamante_edad,3,De 26 a 35
 llamante_edad,4,De 36 a 45
