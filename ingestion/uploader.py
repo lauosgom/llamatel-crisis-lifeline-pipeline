@@ -12,8 +12,9 @@ import json
 
 
 def _get_client() -> storage.Client:
-    credentials_info = json.loads(GCS_CREDENTIALS_JSON)
-    credentials = service_account.Credentials.from_service_account_info(credentials_info)
+    credentials = service_account.Credentials.from_service_account_file(
+        '/home/lauosgom/credentials.json'
+    )
     return storage.Client(credentials=credentials)
 
 
