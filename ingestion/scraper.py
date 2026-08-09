@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from playwright.sync_api import sync_playwright, Page
+from playwright.sync_api import sync_playwright
 from config.settings import BOT_USERNAME, BOT_PASSWORD, START_DATE, END_DATE, BASE_URL, PDF_TMP_DIR
 import os
 
@@ -11,7 +11,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
     _start = start_date or START_DATE
     _end = end_date or END_DATE
 
-    TIMEOUT = 30000  # 30 seconds in milliseconds
+    TIMEOUT = 30000
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -34,19 +34,19 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             print("Logged in! Current URL:", page.url)
 
         def search_records() -> int:
-      	    print("Navigating to Gestión...")
-    	    page.click("a[href='?class=llamadas&menu_pos=2']")
-    	    page.wait_for_load_state("domcontentloaded")
-    	    print(f"Filling date range: {_start} to {_end}...")
-	    page.fill("input[name='desde']", _start)
-	    page.fill("input[name='hasta']", _end)
-	    print("Clicking search...")
-	    page.locator("input.botones[value='Buscar >>']").click()
-	    page.wait_for_selector("td.query_result_paginas font b", state="visible", timeout=TIMEOUT)
-	    raw_count = page.locator("td.query_result_paginas font b").inner_text()
-	    total = int(raw_count.strip().replace(",", "").replace(".", ""))
-	    print(f"Records found: {total}")
-	    return total
+            print("Navigating to Gestion...")
+            page.click("a[href='?class=llamadas&menu_pos=2']")
+            page.wait_for_load_state("domcontentloaded")
+            print(f"Filling date range: {_start} to {_end}...")
+            page.fill("input[name='desde']", _start)
+            page.fill("input[name='hasta']", _end)
+            print("Clicking search...")
+            page.locator("input.botones[value='Buscar >>']").click()
+            page.wait_for_selector("td.query_result_paginas font b", state="visible", timeout=TIMEOUT)
+            raw_count = page.locator("td.query_result_paginas font b").inner_text()
+            total = int(raw_count.strip().replace(",", "").replace(".", ""))
+            print(f"Records found: {total}")
+            return total
 
         def download_pdf() -> str | None:
             numero1 = page.locator("input[name='numero1']").input_value()
@@ -71,10 +71,9 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             next_link = page.locator("a:has-text('Siguiente')")
             if next_link.count() == 0:
                 return False
-            
+
             for attempt in range(3):
                 try:
-                    # Hide chat widget that intercepts clicks
                     page.evaluate("""
                         const chat = document.getElementById('chat-app');
                         if (chat) chat.style.display = 'none';
@@ -86,27 +85,23 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
                     if attempt < 2:
                         print(f"Attempt {attempt + 1} failed: {e}, waiting...")
                         page.wait_for_timeout(3000)
-                        
-                        # check if button reappeared after waiting
                         next_link = page.locator("a:has-text('Siguiente')")
                         if next_link.count() == 0:
                             print("Siguiente button gone after wait, trying reload...")
                             try:
-                                page.reload(wait_until="domcontentloaded", timeout=60000)  # longer timeout
+                                page.reload(wait_until="domcontentloaded", timeout=60000)
                                 next_link = page.locator("a:has-text('Siguiente')")
                                 if next_link.count() == 0:
                                     return False
                             except Exception as reload_err:
                                 print(f"Reload also failed: {reload_err}")
                                 return False
-
                     else:
                         print(f"Max retries reached: {e}")
                         return False
-            
+
             return False
 
-        # --- main flow ---
         login()
         total = search_records()
         page.locator("tr.queryresult").first.click()
