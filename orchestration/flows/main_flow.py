@@ -47,6 +47,7 @@ def main_flow(
         load_task(df)
 
     scrape(on_record=handle_record, start_date=_start, end_date=_end)
+    logger.info("Scraping completed")
     dbt_task()
 
 

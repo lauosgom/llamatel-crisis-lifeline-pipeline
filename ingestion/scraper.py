@@ -33,18 +33,20 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             page.wait_for_load_state("networkidle", timeout=TIMEOUT)
             print("Logged in! Current URL:", page.url)
 
-        def search_records() -> int:
-            page.click("a[href='?class=llamadas&menu_pos=2']")
-            page.wait_for_load_state("domcontentloaded")
-            page.fill("input[name='desde']", _start)
-            page.fill("input[name='hasta']", _end)
-            page.locator("input.botones[value='Buscar >>']").click()
-            print("clicked too")
-            page.wait_for_selector("td.query_result_paginas font b", state="visible")
-            raw_count = page.locator("td.query_result_paginas font b").inner_text()
-            total = int(raw_count.strip().replace(",", "").replace(".", ""))
-            print(f"Records found: {total}")
-            return total
+       def search_records() -> int:
+      	    print("Navigating to Gestión...")
+    	    page.click("a[href='?class=llamadas&menu_pos=2']")
+    	    page.wait_for_load_state("domcontentloaded")
+    	    print(f"Filling date range: {_start} to {_end}...")
+	    page.fill("input[name='desde']", _start)
+	    page.fill("input[name='hasta']", _end)
+	    print("Clicking search...")
+	    page.locator("input.botones[value='Buscar >>']").click()
+	    page.wait_for_selector("td.query_result_paginas font b", state="visible", timeout=TIMEOUT)
+	    raw_count = page.locator("td.query_result_paginas font b").inner_text()
+	    total = int(raw_count.strip().replace(",", "").replace(".", ""))
+	    print(f"Records found: {total}")
+	    return total
 
         def download_pdf() -> str | None:
             numero1 = page.locator("input[name='numero1']").input_value()
