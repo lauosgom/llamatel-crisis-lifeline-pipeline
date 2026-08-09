@@ -33,7 +33,7 @@ def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None
             page.wait_for_load_state("networkidle", timeout=TIMEOUT)
             print("Logged in! Current URL:", page.url)
 
-       def search_records() -> int:
+        def search_records() -> int:
       	    print("Navigating to Gestión...")
     	    page.click("a[href='?class=llamadas&menu_pos=2']")
     	    page.wait_for_load_state("domcontentloaded")
