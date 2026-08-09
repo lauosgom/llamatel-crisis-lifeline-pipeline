@@ -7,6 +7,11 @@ from config.settings import BOT_USERNAME, BOT_PASSWORD, START_DATE, END_DATE, BA
 import os
 
 def scrape(on_record=None, start_date: str = None, end_date: str = None) -> None:
+    print(f"BOT_USERNAME: {BOT_USERNAME}")
+    print(f"BASE_URL: {BASE_URL}")
+    print(f"PDF_TMP_DIR: {PDF_TMP_DIR}")
+    print(f"start_date: {start_date}")
+    print(f"end_date: {end_date}")
 
     _start = start_date or START_DATE
     _end = end_date or END_DATE
