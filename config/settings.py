@@ -6,8 +6,6 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 
 import os
 
-load_dotenv()
-
 # --- Credentials (from .env) ---
 BOT_USERNAME = os.getenv("BOT_USERNAME")
 BOT_PASSWORD = os.getenv("BOT_PASSWORD")
@@ -24,8 +22,8 @@ BQ_DATASET_MARTS = "marts"
 BQ_TABLE_CALLS = "llamatel-llamadas"
 
 # --- Scraper ---
-START_DATE = "01/01/2025"  # or make these parameters too DD/MM/YYYY
-END_DATE   = "31/12/2025"
+START_DATE = "01/07/2025"  # or make these parameters too DD/MM/YYYY
+END_DATE   = "31/07/2025"
 PDF_TMP_DIR = "/tmp/llamatel"
 
 # --- URLs ---
