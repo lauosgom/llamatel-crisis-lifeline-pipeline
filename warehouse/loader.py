@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 import pandas as pd
 from google.cloud import bigquery
 from google.oauth2 import service_account
-from config.settings import GCS_CREDENTIALS_JSON, GCP_PROJECT_ID, BQ_DATASET_RAW, BQ_TABLE_CALLS, GCS_BUCKET_NAME, GCS_PDF_PREFIX BQ_LOCATION
+from config.settings import GCS_CREDENTIALS_JSON, GCP_PROJECT_ID, BQ_DATASET_RAW, BQ_TABLE_CALLS, GCS_BUCKET_NAME, GCS_PDF_PREFIX, BQ_LOCATION
 import os
 import json
 
