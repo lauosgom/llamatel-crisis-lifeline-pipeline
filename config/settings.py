@@ -20,6 +20,7 @@ GCP_PROJECT_ID = "singular-arbor-401018"
 BQ_DATASET_RAW = "raw"
 BQ_DATASET_MARTS = "marts"
 BQ_TABLE_CALLS = "llamatel-llamadas"
+BQ_LOCATION = "US"
 
 # --- Scraper ---
 START_DATE = "01/07/2025"  # or make these parameters too DD/MM/YYYY
